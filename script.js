@@ -19,4 +19,4 @@ const messageGenerator = () => {
     return finalMessage
 }
 
-console.log(messageGenerator())
+document.getElementById('main-fortune').innerHTML = messageGenerator()
