@@ -10,4 +10,13 @@ const messageGenerator = () => {
             'Share your happiness with others today!',
             'Remember to give others good fortune.']
     }
+
+    let gen1 = Math.floor(Math.random()*2)
+    let gen2 = Math.floor(Math.random()*2)
+    let gen3 = Math.floor(Math.random()*2)
+    let message = [messages.intro[gen1],messages.main[gen2],messages.end[gen3]]
+    let finalMessage = message.join(' ')
+    return finalMessage
 }
+
+console.log(messageGenerator())
