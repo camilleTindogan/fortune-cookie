@@ -11,10 +11,13 @@ const messageGenerator = () => {
             'Remember to give others good fortune.']
     }
 
-    let gen1 = Math.floor(Math.random()*2)
-    let gen2 = Math.floor(Math.random()*2)
-    let gen3 = Math.floor(Math.random()*2)
-    let message = [messages.intro[gen1],messages.main[gen2],messages.end[gen3]]
+    //loops throuh the object messages and pushes to message array
+    let message =[]
+    for(let i = 0 ; i < 3; i++){
+            message.push(messages[Object.keys(messages)[i]][Math.floor(Math.random()*3)])
+    }
+
+    // final join
     let finalMessage = message.join(' ')
     return finalMessage
 }
